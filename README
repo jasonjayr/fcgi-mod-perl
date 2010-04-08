@@ -1,0 +1,34 @@
+fcgi-mod_perl
+-------------
+
+This project grew out of the desire to run mod_perl 1.3 based code without
+Apache.  I work on a project that's pretty integrated with mod_perl 1.3, but
+with the Apache project end-of-lifing the Apache 1.3 series, we need an
+migration path.  Since we've started to use nginx in our systems, it makes more
+sense to see if we can move to a system that will let us connect our
+application directly to nginx w/o having apache as an intermediary.
+
+I am a rookie in a field of giants, but I hope that this can help others move
+their projects to modern httpds and frameworks.
+
+
+TODO
+----
+
+I've decided on a whim to push this up to github, but It needs a lot more
+polish before I reccomend you try running it.  I will update this README with
+the details of what it can do, and how you can run it.  
+
+As is true of any perl library, testing this codebase will be essential.  I
+hope that this project helps motivate me to try + expereiemnt with more testing
+frameworks, an area I sorely need experience in (even being a perl 'dev' all
+these years)
+
+Ultimatly, you will configure this library by running a perl script that will
+setup the mod_perl environment + request handlers, then start listening on the
+fcgi socket.  I intend to provide a way to directly import portions of the
+apache 1.3 config into this runtime.
+
+
+Jason Jay Rodrigues
+oss@jjayr.com
